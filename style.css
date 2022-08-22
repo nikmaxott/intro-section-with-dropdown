@@ -3,3 +3,60 @@
 body {
     margin: 0;
 }
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .menu {
+    display: flex;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    margin: 0.5rem;
+}
+
+li:hover:not(.subItem) {
+    color:var(--almost-black)
+}
+
+.subItem::after{
+    content: url("./images/icon-arrow-down.svg")
+}
+
+.subItem:hover::after{
+    content: url("./images/icon-arrow-up.svg")
+}
+
+.subItem ul {
+    display: block;
+    position:absolute;
+    padding: 1rem;
+    margin: 1rem;
+    z-index: 15;
+    background-color: var(--almost-white);
+    border-radius: 15px;
+    box-shadow: 0 0 20px var(--medium-gray);
+}
+
+#features {
+    display: none;
+    margin-left: -4rem;
+}
+
+#company {
+    display: none;
+    margin-left: 0rem;
+}
+
+#register {
+    border: 1px solid var(--medium-gray);
+    border-radius: 10px;
+}
