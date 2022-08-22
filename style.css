@@ -13,6 +13,7 @@ header {
 
 header .menu {
     display: flex;
+    align-items: flex-start;
 }
 
 ul {
@@ -20,7 +21,7 @@ ul {
 }
 
 ul li {
-    margin: 0.5rem;
+    margin: 0.5rem 0.75rem;
 }
 
 li:hover:not(.subItem) {
@@ -49,14 +50,90 @@ li:hover:not(.subItem) {
 #features {
     display: none;
     margin-left: -4rem;
+    margin-top: 0;
+}
+
+#features img {
+    padding-right: 0.4rem;
 }
 
 #company {
     display: none;
     margin-left: 0rem;
+    margin-top: 0;
 }
 
-#register {
-    border: 1px solid var(--medium-gray);
-    border-radius: 10px;
+.dropdown:hover #features, #features:hover, .dropdown:hover #company {
+    display: block;
 }
+
+
+#register {
+    border: 2px solid;
+    border-radius: 10px;
+    background-color: var(--almost-white);
+    padding: 0.5rem 1rem;
+    color: var(--medium-gray);
+    margin: 0 1rem;
+}
+
+#register:hover {
+    color: var(--almost-black);
+}
+
+/* BODY */
+
+main {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    max-width: 100%;
+    padding: 0rem 4rem;
+}
+
+main div {
+    padding: 3rem;
+}
+
+h1 {
+    color: var(--almost-black);
+    font-size: 4.9rem;
+}
+
+p {
+    max-width: 80%;
+}
+
+button {
+    border: 0;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+#learnmore {
+    background-color: var(--almost-black);
+    color: var(--almost-white);
+    margin: 4rem 0rem;
+    padding: 1rem;
+}
+
+#learnmore:hover {
+    background-color: var(--almost-white);
+    color: var(--almost-black);
+    border: 2px solid;
+}
+
+.gallery {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    padding-top: 6rem;
+}
+
+.gallery img {
+    margin: 0.3rem;
+    padding: 0.3rem;
+}
+
+/* img:not(.menu li) {
+    width: 100%;
+} */
