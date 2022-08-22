@@ -5,6 +5,7 @@
     --almost-black: hsl(0, 0%, 8%);
 
     font-size: 18px;
+    font-weight: 500;
     font-family: 'Epilogue', sans-serif;
     color: var(--medium-gray);
 }
