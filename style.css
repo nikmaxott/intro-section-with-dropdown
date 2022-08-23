@@ -115,10 +115,6 @@ li:hover:not(.subItem) {
         display: none;
     }
 
-    .menu ul li img {
-        display: none;
-    }
-
     .menu p {
         display: block;
         text-align: right;
@@ -131,13 +127,15 @@ li:hover:not(.subItem) {
 
     .menu ul {
         padding: 0;
+    }
+
+    .menu ul:not(#features,#company):nth-child(3){
         text-align: center;
     }
 
-    .menu ul:first-of-type {
-        text-align: left;
+    .menu ul li img[src="./images/logo.svg"] {
+        display: none;
     }
-
 
     .mobile {
         display: block;
@@ -175,10 +173,6 @@ li:hover:not(.subItem) {
 
     ul li {
         margin: 1rem;
-    }
-
-    .main {
-        opacity: 100;
     }
 
     .menu-open .overlay {
@@ -273,6 +267,7 @@ button {
         display: flex;
         flex-direction: column-reverse;
         padding: 0;
+        opacity: 100;
     }
 
     main div {
