@@ -14,9 +14,10 @@
 <body id="body">
   <header>
     <img src="./images/logo.svg" alt="Snap Logo" class="mobile" />
-    <img src="./images/icon-menu.svg" alt="menu" class="mobile" height="100%" onclick="openMenu()"/>
+    <img src="./images/icon-menu.svg" alt="menu" class="mobile" height="100%" onclick="openMenu()" />
 
     <nav class="menu" id="menu">
+      <p><img src="./images/icon-close-menu.svg" alt="Close Menu" onclick="closeMenu()" /></p>
       <ul>
         <li><img src="./images/logo.svg" alt="Snap Logo" /></li>
         <li class="subItem" onclick="featuresOnClick()">Features</li>
@@ -68,36 +69,36 @@
 
 </body>
 
-<script> 
+<script>
   function featuresOnClick() {
-    if (document.getElementById("features").style.display==="none") {
-      document.getElementById("features").style.display="block"
-      document.getElementById("company").style.display="none"
+    if (document.getElementById("features").style.display === "none") {
+      document.getElementById("features").style.display = "block"
+      document.getElementById("company").style.display = "none"
     } else {
-      document.getElementById("features").style.display="none"
-    } 
+      document.getElementById("features").style.display = "none"
+    }
   }
 
   function companyOnClick() {
-    if (document.getElementById("company").style.display==="none") {
-      document.getElementById("company").style.display="block"
-      document.getElementById("features").style.display="none"
+    if (document.getElementById("company").style.display === "none") {
+      document.getElementById("company").style.display = "block"
+      document.getElementById("features").style.display = "none"
     } else {
-      document.getElementById("company").style.display="none"
+      document.getElementById("company").style.display = "none"
     }
   }
 
   function clearFocus() {
-    document.getElementById("features").style.display="none"
-    document.getElementById("company").style.display="none"
+    document.getElementById("features").style.display = "none"
+    document.getElementById("company").style.display = "none"
   }
 
-  function openMenu(){
+  function openMenu() {
     document.getElementById("body").className = "menu-open";
   }
 
   function closeMenu() {
-    document.getElementById("menu").animate([{right: "0px"},{right: "-500px"}],{duration: 600, iterations: 1});
+    document.getElementById("menu").animate([{ right: "0px" }, { right: "-500px" }], { duration: 600, iterations: 1 });
     setTimeout(close, 400);
   }
 

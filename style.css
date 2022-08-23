@@ -7,7 +7,6 @@ body {
 /* Header */
 
 @media screen and (min-width: 450px) {
-
     #company,
     #features {
         display: block;
@@ -30,6 +29,15 @@ body {
         top: 3rem;
         left: 15.5rem;
     }
+
+    .menu ul li img {
+        display: inline;
+    }
+
+    .menu p {
+        display: none;
+    }
+
 }
 
 header .menu {
@@ -56,11 +64,13 @@ li:hover:not(.subItem) {
 }
 
 .subItem::after {
-    content: url("./images/icon-arrow-down.svg")
+    content: url("./images/icon-arrow-down.svg");
+    margin-left: 0.5rem;
 }
 
 .subItem:hover::after {
-    content: url("./images/icon-arrow-up.svg")
+    content: url("./images/icon-arrow-up.svg");
+    margin-left: 0.5rem;
 }
 
 #features {
@@ -105,6 +115,30 @@ li:hover:not(.subItem) {
         display: none;
     }
 
+    .menu ul li img {
+        display: none;
+    }
+
+    .menu p {
+        display: block;
+        text-align: right;
+        margin: 0;
+    }
+
+    .menu p img {
+        margin: 0.75rem;
+    }
+
+    .menu ul {
+        padding: 0;
+        text-align: center;
+    }
+
+    .menu ul:first-of-type {
+        text-align: left;
+    }
+
+
     .mobile {
         display: block;
         margin: 1rem;
@@ -139,6 +173,10 @@ li:hover:not(.subItem) {
         display: block;
     }
 
+    ul li {
+        margin: 1rem;
+    }
+
     .main {
         opacity: 100;
     }
@@ -157,11 +195,11 @@ li:hover:not(.subItem) {
     }
 
     #company {
-        padding-left: 0;
+        padding-left: 0.5rem;
     }
 
     #features {
-        padding-left: 0;
+        padding-left: 0.5rem;
     }
 }
 
