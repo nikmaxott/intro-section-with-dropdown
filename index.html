@@ -16,7 +16,7 @@
     <img src="./images/logo.svg" alt="Snap Logo" class="mobile" />
     <img src="./images/icon-menu.svg" alt="menu" class="mobile" height="100%" onclick="openMenu()"/>
 
-    <nav class="menu">
+    <nav class="menu" id="menu">
       <ul>
         <li><img src="./images/logo.svg" alt="Snap Logo" /></li>
         <li class="subItem" onclick="featuresOnClick()">Features</li>
@@ -97,9 +97,13 @@
   }
 
   function closeMenu() {
+    document.getElementById("menu").animate([{right: "0px"},{right: "-500px"}],{duration: 600, iterations: 1});
+    setTimeout(close, 400);
+  }
+
+  function close() {
     document.getElementById("body").className = "";
   }
-// add menu-open to body
 </script>
 
 

@@ -114,9 +114,14 @@ li:hover:not(.subItem) {
         display: none;
     }
 
+    @keyframes open {
+        from {right: -500px;}
+        to {right: 0px;}
+    }
+
     .menu-open .menu {
         display: block;
-        position: fixed;
+        position: absolute;
         top: 0;
         right: 0;
         width: 60%;
@@ -125,6 +130,9 @@ li:hover:not(.subItem) {
         z-index: 9999;
         background-color: var(--almost-white);
         text-align: left;
+        animation-name: open;
+        animation-duration: 0.4s;
+        transition: all ease-in-out 0.3s;
     }
 
     ul {
@@ -143,7 +151,7 @@ li:hover:not(.subItem) {
         height: 100%;
         z-index: 999;
         background-color: var(--medium-gray);
-        transition: all ease 0.3s;
+        transition: all ease-in-out 0.3s;
         visibility: visible;
         opacity: 0.9;
     }
