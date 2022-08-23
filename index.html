@@ -11,39 +11,38 @@
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 </head>
 
-<body>
+<body id="body">
   <header>
     <img src="./images/logo.svg" alt="Snap Logo" class="mobile" />
-    <img src="./images/icon-menu.svg" alt="menu" class="mobile" height="100%" />
+    <img src="./images/icon-menu.svg" alt="menu" class="mobile" height="100%" onclick="openMenu()"/>
 
-    <ul class="menu">
-      <li><img src="./images/logo.svg" alt="Snap Logo" /></li>
-      <li class="subItem dropdown">Features
-        <ul id="features">
+    <nav class="menu">
+      <ul>
+        <li><img src="./images/logo.svg" alt="Snap Logo" /></li>
+        <li class="subItem" onclick="featuresOnClick()">Features</li>
+        <ul id="features" style="display: none">
           <li><img src="./images/icon-todo.svg" alt="Todo Icon">Todo List</li>
           <li><img src="./images/icon-calendar.svg" alt="Calendar Icon">Calendar</li>
           <li><img src="./images/icon-reminders.svg" alt="Reminders Icon">Reminders</li>
           <li><img src="./images/icon-planning.svg">Planning</li>
         </ul>
-      </li>
-      <li class="subItem dropdown">Company
-        <ul id="company">
+        <li class="subItem" onclick="companyOnClick()">Company</li>
+        <ul id="company" style="display: none">
           <li>History</li>
           <li>Our Team</li>
           <li>Blog</li>
         </ul>
-      </li>
-      <li>Careers</li>
-      <li>About</li>
-    </ul>
-    <ul class="menu">
-      <li>Login</li>
-      <li id="register">Register</li>
-    </ul>
-
+        <li>Careers</li>
+        <li>About</li>
+      </ul>
+      <ul>
+        <li>Login</li>
+        <li id="register">Register</li>
+      </ul>
+    </nav>
   </header>
 
-  <main>
+  <main onclick="clearFocus()">
     <div>
       <h1>Make remote work</h1>
 
@@ -64,8 +63,45 @@
       <img id="hero" width="100%">
     </div>
 
+    <div class="overlay" onclick="closeMenu()"></div>
   </main>
 
 </body>
+
+<script> 
+  function featuresOnClick() {
+    console.log('FOUCS');
+    if (document.getElementById("features").style.display==="none") {
+      document.getElementById("features").style.display="block"
+      document.getElementById("company").style.display="none"
+    } else {
+      document.getElementById("features").style.display="none"
+    } 
+  }
+
+  function companyOnClick() {
+    if (document.getElementById("company").style.display==="none") {
+      document.getElementById("company").style.display="block"
+      document.getElementById("features").style.display="none"
+    } else {
+      document.getElementById("company").style.display="none"
+    }
+  }
+
+  function clearFocus() {
+    document.getElementById("features").style.display="none"
+    document.getElementById("company").style.display="none"
+  }
+
+  function openMenu(){
+    document.getElementById("body").className = "menu-open";
+  }
+
+  function closeMenu() {
+    document.getElementById("body").className = "";
+  }
+// add menu-open to body
+</script>
+
 
 </html>
